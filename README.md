@@ -76,14 +76,15 @@ Projeto 100% estático — sem backend, sem banco de dados, sem dependências de
 /
 ├── index.html              # Página principal
 ├── logo.jpg                # Logotipo da Associação
-├── hero1.jpeg              # Imagem principal do hero (estado 1)
-├── hero2.jpeg              # Imagem principal do hero (estado 2 — crossfade)
-├── foto-destaque.jpeg      # Imagem destaque da grade Instagram
-├── foto-1.jpeg             # Foto voluntários
-├── foto-2.jpeg             # Foto ação de campo
-├── foto-3.jpeg             # Foto distribuição
-├── foto-4.jpeg             # Foto atividade cultural
-├── grid3.jpeg              # Foto equipe
+├── fotos/                  # Pasta com as imagens do site
+│   ├── hero1.jpeg              
+│   ├── hero2.jpeg              
+│   ├── foto-destaque.jpeg      
+│   ├── foto-1.jpeg             
+│   ├── foto-2.jpeg             
+│   ├── foto-3.jpeg             
+│   ├── foto-4.jpeg             
+│   └── grid3.jpeg              
 └── README.md               # Este arquivo
 ```
 
