@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Ação Diária | Alimentar Vidas. Preservar o Futuro.</title>
+
+    <!-- SEO & Open Graph -->
+    <meta name="description"
+        content="A Associação Nossa Ação Diária leva informação relevante e conscientização para o desenvolvimento sustentável em Brasília/DF. Projeto alinhado à Meta 12.8 da ONU - Agenda 2030.">
+    <meta property="og:title" content="Nossa Ação Diária | Alimentar Vidas. Preservar o Futuro.">
+    <meta property="og:description"
+        content="Conscientização, assistência social e estilos de vida em harmonia com a natureza. Conheça a Associação Nossa Ação Diária e o Projeto Extensionista Meta 12.8.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./logo.jpg">
+    <link rel="apple-touch-icon" href="./logo.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#FFFBF5',
+                            primary: '#F48B29',
+                            secondary: '#E91E63',
+                            dark: '#0A0A0A',
+                            text: '#222222',
+                            textMuted: '#555555'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFFBF5;
+            color: #222222;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background-color: #0A0A0A;
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.8)), url('./hero1.jpeg');
+            background-size: cover;
+            background-position: center bottom;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.8)), url('./hero2.jpeg');
+            background-size: cover;
+            background-position: 30% center;
+            border-radius: inherit;
+            opacity: 0;
+            animation: heroCrossfade 14s infinite alternate ease-in-out;
+            pointer-events: none;
+        }
+
+        @media (min-width: 768px) {
+            .hero-bg {
+                background-position: center center;
+            }
+
+            .hero-bg::before {
+                background-position: center center;
+            }
+        }
+
+        @keyframes heroCrossfade {
+
+            0%,
+            40% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            60%,
+            100% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Mobile menu */
+        #mobile-menu {
+            display: none;
+        }
+
+        #mobile-menu.open {
+            display: flex;
+        }
+
+        /* Chain flow animation */
+        .chain-arrow {
+            animation: pulse-arrow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-arrow {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: translateX(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateX(4px);
+            }
+        }
+
+        /* ODS Badge */
+        .ods-badge {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        /* Action cards hover */
+        .action-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .action-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .action-card:hover {
+            box-shadow: 0 20px 40px -10px rgba(244, 139, 41, 0.15);
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ═══════════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════════ -->
+    <nav class="absolute w-full top-0 z-50 text-white p-6">
+        <div
+            class="max-w-6xl mx-auto flex justify-between items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
+
+            <div class="flex items-center gap-1 relative">
+                <img src="./logo.jpg" alt="Logotipo Associação Nossa Ação Diária"
+                    class="h-10 md:h-12 w-auto object-contain rounded-full shadow-sm">
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#manifesto" class="hover:text-brand-primary transition-colors">Manifesto</a>
+                <a href="#sobre-nos" class="hover:text-brand-primary transition-colors">A Associação</a>
+                <a href="#impacto" class="hover:text-brand-primary transition-colors">Impacto</a>
+                <a href="#aja-agora" class="hover:text-brand-primary transition-colors">Como Agir</a>
+                <a href="#doe-agora"
+                    class="bg-brand-primary hover:bg-white hover:text-brand-dark transition-colors px-6 py-2.5 rounded-full font-semibold">Envolva-se</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-toggle" aria-label="Abrir menu de navegação" class="md:hidden p-2">
+                <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="md:hidden flex-col items-center gap-4 bg-black/90 backdrop-blur-xl rounded-3xl mx-4 mt-3 py-8 px-6 border border-white/10">
+            <a href="#manifesto"
+                class="mobile-link text-white text-lg font-medium hover:text-brand-primary transition-colors">Manifesto</a>
+            <a href="#sobre-nos"
+                class="mobile-link text-white text-lg font-medium hover:text-brand-primary transition-colors">A
+                Associação</a>
+            <a href="#impacto"
+                class="mobile-link text-white text-lg font-medium hover:text-brand-primary transition-colors">Impacto</a>
+            <a href="#aja-agora"
+                class="mobile-link text-white text-lg font-medium hover:text-brand-primary transition-colors">Como
+                Agir</a>
+            <a href="#doe-agora"
+                class="bg-brand-primary text-white px-8 py-3 rounded-full font-bold w-full text-center mt-2">Envolva-se</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <header
+        class="relative h-[90vh] md:h-screen w-full hero-bg flex flex-col justify-end pb-24 px-6 rounded-b-[2rem] md:rounded-b-[4rem] overflow-hidden shrink-0">
+        <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
+            <h1 class="font-serif text-5xl md:text-7xl font-semibold text-white mb-6 leading-tight">
+                Alimentar vidas.<br><span class="italic font-light">Preservar o futuro.</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Levamos informação relevante e conscientização para o desenvolvimento sustentável. Promovemos ativamente
+                a adoção de estilos de vida em harmonia com a natureza através de nossas ações.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4">
+                <a href="#doe-agora"
+                    class="flex items-center justify-center gap-2 bg-brand-primary text-white rounded-full px-8 py-4 font-bold tracking-wide hover:-translate-y-1 transition-transform w-full sm:w-auto shadow-lg hover:shadow-brand-primary/50 text-center">
+                    Doe Agora
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+                <a href="#aja-agora"
+                    class="flex items-center justify-center bg-white/10 border border-white/30 text-white rounded-full px-8 py-4 font-semibold hover:-translate-y-1 transition-transform w-full sm:w-auto text-center backdrop-blur-sm">
+                    Como Agir Agora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         MANIFESTO
+    ═══════════════════════════════════════════ -->
+    <section id="manifesto" class="py-24 px-6 bg-brand-bg shrink-0">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="w-16 h-16 mx-auto bg-brand-primary/10 rounded-full flex items-center justify-center mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-primary" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+            </div>
+            <h2 class="font-serif text-3xl md:text-5xl text-brand-dark leading-snug md:leading-tight">
+                "Promover a <span class="italic text-brand-primary font-semibold">conscientização</span> essencial para
+                o desenvolvimento sustentável e inspirar estilos de vida em harmonia com a natureza."
+            </h2>
+            <div
+                class="mt-10 flex items-center justify-center gap-4 text-brand-textMuted uppercase tracking-widest text-xs font-bold">
+                <span class="w-12 h-[2px] bg-brand-primary/40"></span>
+                Nosso Manifesto
+                <span class="w-12 h-[2px] bg-brand-primary/40"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CADEIA DA CONSCIENTIZAÇÃO (NOVA SEÇÃO)
+    ═══════════════════════════════════════════ -->
+    <section id="cadeia" class="py-20 px-6 bg-white shrink-0 overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Como
+                    Funciona</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">Da ação ao impacto consciente
+                </h2>
+                <p class="text-brand-textMuted mt-4 max-w-xl mx-auto text-lg font-light">
+                    Cada gesto da Associação é um ato de educação para a sustentabilidade na prática.
+                </p>
+            </div>
+
+            <!-- Flow Chain -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center max-w-[180px]">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-orange-50 border-2 border-brand-primary/20 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-sm leading-tight">Alimento que seria descartado</h3>
+                    <p class="text-xs text-brand-textMuted mt-1">Indústria e comércio atacadista</p>
+                </div>
+
+                <div class="chain-arrow text-brand-primary text-3xl md:mx-4 rotate-90 md:rotate-0">→</div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center max-w-[180px]">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-orange-50 border-2 border-brand-primary/20 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-sm leading-tight">Redistribuído com inteligência</h3>
+                    <p class="text-xs text-brand-textMuted mt-1">Voluntários e rede ativa de doações</p>
+                </div>
+
+                <div class="chain-arrow text-brand-primary text-3xl md:mx-4 rotate-90 md:rotate-0"
+                    style="animation-delay:0.3s">→</div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center max-w-[180px]">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-orange-50 border-2 border-brand-primary/20 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-brand-dark text-sm leading-tight">Dignidade entregue a quem precisa
+                    </h3>
+                    <p class="text-xs text-brand-textMuted mt-1">Pessoas em vulnerabilidade social</p>
+                </div>
+
+                <div class="chain-arrow text-brand-primary text-3xl md:mx-4 rotate-90 md:rotate-0"
+                    style="animation-delay:0.6s">→</div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center max-w-[180px]">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-green-50 border-2 border-green-500/30 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-green-700 text-sm leading-tight">Conscientização para a sociedade</h3>
+                    <p class="text-xs text-green-600/70 mt-1 font-medium">Meta 12.8 - Agenda 2030</p>
+                </div>
+            </div>
+
+            <!-- Tagline -->
+            <p class="text-center text-brand-textMuted mt-12 text-base max-w-2xl mx-auto font-light leading-relaxed">
+                Ao transformar o descarte em dignidade, a Associação não apenas alimenta corpos, ela educa a sociedade
+                que <strong class="text-brand-dark font-semibold">consumir com responsabilidade e cuidar do próximo é a
+                    tradução prática da sustentabilidade.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SOBRE A ASSOCIAÇÃO - REESCRITO COM META 12.8
+    ═══════════════════════════════════════════ -->
+    <section id="sobre-nos" class="py-24 px-6 shrink-0 bg-brand-bg relative overflow-hidden">
+        <div class="absolute -left-40 top-20 w-80 h-80 bg-brand-primary/5 rounded-full blur-[80px]"></div>
+        <div class="absolute -right-20 bottom-0 w-60 h-60 bg-brand-secondary/5 rounded-full blur-[60px]"></div>
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Quem Somos</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4 leading-tight">Nossa Base Institucional</h2>
+            <p class="text-brand-textMuted text-base mb-16 max-w-xl mx-auto font-light">Três pilares de atuação que,
+                juntos, constroem o caminho para o desenvolvimento sustentável na prática.</p>
+
+            <!-- Três Pilares com integração da Meta 12.8 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-16">
+
+                <!-- Pilar 1 -->
+                <div class="bg-white rounded-3xl p-8 card-shadow border border-brand-primary/10 flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Pilar 01</span>
+                    <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Assistência e Doações</h3>
+                    <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
+                        A Associação desenvolve programas de assistência social e caráter beneficente, apoiando famílias
+                        com doações de alimentos, roupas e itens de necessidade básica. Ao recolher alimentos de
+                        excelência que seriam descartados pela indústria e redistribuí-los com inteligência e agilidade,
+                        a Associação ensina na prática o valor do <strong class="text-brand-dark font-medium">consumo
+                            consciente e do desperdício zero</strong>, princípios centrais do desenvolvimento
+                        sustentável previsto na Meta 12.8.
+                    </p>
+                    <div class="mt-5 pt-5 border-t border-gray-100">
+                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta
+                            12.8: Consumo Responsável</span>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bg-white rounded-3xl p-8 card-shadow border border-brand-primary/10 flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Pilar 02</span>
+                    <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Crianças e Adolescentes</h3>
+                    <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
+                        Por meio de campanhas e atividades culturais voltadas a crianças e adolescentes em situação de
+                        vulnerabilidade, a Associação planta sementes de consciência nas gerações que mais precisam de
+                        referências. Educar pelo exemplo é a forma mais poderosa de cumprir a missão da Meta 12.8:
+                        <strong class="text-brand-dark font-medium">garantir que pessoas em todos os lugares</strong>
+                        tenham acesso a informação relevante para viver em harmonia com a natureza e com o próximo.
+                    </p>
+                    <div class="mt-5 pt-5 border-t border-gray-100">
+                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta
+                            12.8: Educação para Futuro</span>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bg-white rounded-3xl p-8 card-shadow border border-brand-primary/10 flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Pilar 03</span>
+                    <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Resgate e Reintegração Social</h3>
+                    <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
+                        A Associação presta auxílio social, apoio e acolhimento a pessoas em situação de rua e em
+                        recuperação de dependência química e alcoólica, com foco na reintegração familiar e social. Ao
+                        devolver dignidade e pertencimento a quem foi invisibilizado, a Associação demonstra que <strong
+                            class="text-brand-dark font-medium">sustentabilidade humana e ambiental são
+                            inseparáveis</strong>: cuidar de pessoas é cuidar do mundo.
+                    </p>
+                    <div class="mt-5 pt-5 border-t border-gray-100">
+                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta
+                            12.8: Harmonia com o Próximo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloco ODS 12.8 - simplificado e conclusivo -->
+            <div class="bg-brand-dark rounded-3xl p-8 md:p-12 text-left relative overflow-hidden">
+                <div class="absolute right-0 top-0 w-48 h-48 bg-brand-primary/10 rounded-full blur-[60px]"></div>
+                <div class="flex flex-col md:flex-row items-start gap-8 relative z-10">
+                    <!-- ODS Badge -->
+                    <div class="shrink-0">
+                        <div
+                            class="ods-badge w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white">
+                            <span class="text-xs font-bold uppercase tracking-wider opacity-80">ODS</span>
+                            <span class="text-3xl font-black leading-none">12</span>
+                        </div>
+                        <p class="text-white/40 text-xs text-center mt-2 font-medium">Agenda 2030</p>
+                    </div>
+                    <div>
+                        <span class="text-brand-primary text-xs font-bold uppercase tracking-widest mb-3 block">Projeto
+                            Extensionista · Meta 12.8</span>
+                        <h3 class="font-serif text-2xl md:text-3xl text-white mb-4 leading-snug">Nosso Papel na ODS 12.8
+                        </h3>
+                        <p class="text-white/70 text-base font-light leading-relaxed">
+                            Esta plataforma digitaliza e amplifica o impacto da Associação, transformando cada ação do
+                            campo em informação pública e inspiradora. Ao conectar a sociedade ao trabalho real da Nossa
+                            Ação Diária, aqui em Brasília/DF, mas com potencial de inspirar associações em todo o
+                            Brasil, cumprimos a Meta 12.8 da Agenda 2030 da ONU: <strong class="text-white">garantir
+                                que pessoas, em todos os lugares, tenham informação relevante para estilos de vida em
+                                harmonia com a natureza.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         INSTAGRAM GRID
+    ═══════════════════════════════════════════ -->
+    <section id="instagram" class="py-12 md:py-24 px-6 shrink-0 bg-white relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-96 h-96 bg-brand-primary/10 rounded-full blur-[100px]"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <span
+                        class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Acompanhe</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">Nossa Ação na Prática</h2>
+                </div>
+                <a href="https://www.instagram.com/nossa.acao.diaria/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-gradient-to-tr from-[#FF7A00] to-[#E91E63] text-white font-bold hover:shadow-lg hover:shadow-brand-secondary/30 transition-all hover:-translate-y-1 px-8 py-4 rounded-full uppercase tracking-wider text-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    </svg>
+                    @nossa.acao.diaria
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 insta-grid">
+                <div
+                    class="aspect-square md:col-span-2 md:row-span-2 rounded-[2rem] overflow-hidden group relative shadow-xl">
+                    <img src="./foto-destaque.jpeg" loading="lazy"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        alt="Voluntária da Associação Nossa Ação Diária distribuindo caixas de alimentos para famílias em Brasília">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="text-white text-sm font-medium line-clamp-3">Informação que transforma. Nossa
+                            mobilização gera conscientização para o desenvolvimento sustentável e inspira estilos de
+                            vida em harmonia com a natureza. 🌱 #ODS12_8 #NossaAcaoDiaria</span>
+                    </div>
+                </div>
+                <div
+                    class="aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden group shadow-md border border-black/5 relative">
+                    <img src="./foto-3.jpeg" loading="lazy"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Distribuição de alimentos e doações para comunidades vulneráveis em Brasília">
+                </div>
+                <div
+                    class="aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden group shadow-md border border-black/5 relative">
+                    <img src="./grid3.jpeg" loading="lazy"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Equipe de voluntários da Associação Nossa Ação Diária reunida">
+                </div>
+                <div
+                    class="aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden group shadow-md border border-black/5 relative">
+                    <img src="./foto-4.jpeg" loading="lazy"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Atividade cultural com crianças e adolescentes em situação de vulnerabilidade">
+                </div>
+                <div
+                    class="aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden group shadow-md border border-black/5 relative">
+                    <img src="./foto-1.jpeg" loading="lazy"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Voluntários em ação durante evento de assistência social da Associação">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         IMPACTO - BENTO GRID
+    ═══════════════════════════════════════════ -->
+    <section id="impacto" class="py-12 md:py-24 px-6 shrink-0 w-full overflow-hidden bg-brand-bg">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-14">
+                <span
+                    class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Resultados</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">O impacto em números</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card Métricas Principal -->
+                <div
+                    class="md:col-span-2 bg-white rounded-[2rem] p-10 md:p-14 card-shadow flex flex-col justify-between border border-brand-primary/10 min-h-[300px]">
+                    <div class="flex justify-between items-start mb-8">
+                        <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary">Um Mundo
+                            Renascido</span>
+                        <div class="w-10 h-10 rounded-full bg-brand-bg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 id="counter-main"
+                            class="font-serif text-6xl md:text-8xl font-bold text-brand-dark tracking-tighter">
+                            5.000<span class="text-brand-primary">+</span></h3>
+                        <p class="text-brand-textMuted text-lg md:text-xl mt-4 max-w-sm">Pessoas <strong
+                                class="text-brand-dark">conscientizadas e assistidas</strong> com ações sobre estilos de
+                            vida sustentáveis em Brasília desde 2023.</p>
+                        <!-- Distinção Assistência vs Conscientização -->
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            <span
+                                class="text-xs bg-orange-50 text-brand-primary border border-brand-primary/20 px-3 py-1.5 rounded-full font-semibold">Assistência
+                                direta: famílias e indivíduos</span>
+                            <span
+                                class="text-xs bg-green-50 text-green-700 border border-green-200 px-3 py-1.5 rounded-full font-semibold">Conscientização:
+                                visitantes da plataforma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Foto Visão ODS -->
+                <div class="bg-gray-200 rounded-[2rem] overflow-hidden relative group min-h-[300px]">
+                    <img src="./foto-1.jpeg" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        alt="Voluntário da Associação Nossa Ação Diária em ação no campo">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+                        <span
+                            class="bg-brand-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full w-max mb-3">Visão
+                            ODS 12.8</span>
+                        <p class="text-white mx-1">Garantimos que, em todos os lugares, as pessoas tenham informação
+                            relevante sobre harmonia com a natureza.</p>
+                    </div>
+                </div>
+
+                <!-- Card Missão -->
+                <div
+                    class="bg-brand-dark rounded-[2rem] p-10 md:p-14 text-white flex flex-col justify-between min-h-[300px] relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-brand-secondary/20 rounded-full blur-3xl">
+                    </div>
+                    <div class="relative z-10">
+                        <span class="uppercase tracking-widest text-xs font-bold text-brand-primary mb-6 block">Nossa
+                            Missão</span>
+                        <h3 class="font-serif text-3xl md:text-4xl leading-snug">Construindo um futuro de consciência
+                            profunda.</h3>
+                    </div>
+                    <div class="mt-8 relative z-10">
+                        <p class="text-white/60 text-sm font-light">Associação ativa em Brasília/DF desde 2023, um
+                            modelo replicável para todo o Brasil.</p>
+                    </div>
+                </div>
+
+                <!-- Card Inteligência Solidária -->
+                <div
+                    class="md:col-span-2 bg-white rounded-[2rem] p-10 md:p-14 card-shadow border border-brand-primary/10 flex flex-col md:flex-row gap-8 items-center min-h-[300px]">
+                    <div class="flex-1">
+                        <h3 class="font-serif text-3xl font-semibold mb-4 text-brand-dark">Como funciona a inteligência
+                            solidária?</h3>
+                        <p class="text-brand-textMuted leading-relaxed mb-8">Nós recolhemos alimentos de excelência que
+                            seriam descartados pela indústria e comércios atacadistas, e os direcionamos em tempo
+                            recorde para pessoas em situação de rua, através da nossa rede de voluntários ativos.
+                            <strong class="text-brand-dark">Zero desperdício. Máximo impacto humano.</strong>
+                        </p>
+                        <a href="#aja-agora"
+                            class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-brand-secondary transition-colors uppercase tracking-wider text-sm">
+                            Como você pode agir
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 aspect-square rounded-[2rem] overflow-hidden shrink-0 border-8 border-brand-bg relative flex items-center justify-center">
+                        <img src="./foto-2.jpeg" loading="lazy"
+                            class="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                            alt="Membros da Associação Nossa Ação Diária em atividade solidária">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         COMO AGIR AGORA (NOVA SEÇÃO)
+    ═══════════════════════════════════════════ -->
+    <section id="aja-agora" class="py-24 px-6 bg-white shrink-0">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Sua
+                    Contribuição</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight mb-4">Como você pode agir agora
+                </h2>
+                <p class="text-brand-textMuted max-w-xl mx-auto font-light text-lg">
+                    A conscientização só se completa quando inspira ação. Escolha como quer fazer parte desta mudança,
+                    cada gesto conta.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Ação 1: Compartilhar -->
+                <div class="action-card bg-brand-bg border border-brand-primary/10 rounded-3xl p-8 flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-2">Ação
+                        Imediata</span>
+                    <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Compartilhe</h3>
+                    <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
+                        Compartilhe este site e o Instagram da Associação com sua rede. Informação que não circula não
+                        transforma. Cada compartilhamento é um ato de conscientização, exatamente o que a Meta 12.8
+                        pede.
+                    </p>
+                    <a href="https://www.instagram.com/nossa.acao.diaria/" target="_blank" rel="noopener noreferrer"
+                        class="mt-6 inline-flex items-center gap-2 text-brand-primary font-bold text-sm hover:text-brand-secondary transition-colors">
+                        Acompanhar no Instagram →
+                    </a>
+                </div>
+
+                <!-- Ação 2: Evitar desperdício -->
+                <div class="action-card bg-green-50 border border-green-200 rounded-3xl p-8 flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-bold text-green-600 uppercase tracking-widest mb-2">No Seu Dia a
+                        Dia</span>
+                    <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Reduza o Desperdício</h3>
+                    <p class="text-[#555] text-sm leading-relaxed font-light flex-1">
+                        Planejar compras, aproveitar alimentos integralmente e compostar resíduos são atos de
+                        sustentabilidade real. A mesma lógica da Associação (nada se perde) pode começar dentro da sua
+                        casa hoje.
+                    </p>
+                    <span class="mt-6 inline-flex items-center gap-2 text-green-700 font-bold text-sm">
+                        Pequenas ações, grande impacto ✓
+                    </span>
+                </div>
+
+                <!-- Ação 3: Indicar para empresas -->
+                <div class="action-card bg-brand-bg border border-brand-primary/10 rounded-3xl p-8 flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-primary" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <span class="text-xs font-bold text-brand-primary uppercase tracking-widest mb-2">Para
+                        Empresas</span>
+                    <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Indique a Associação</h3>
+                    <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
+                        Conhece alguma empresa, supermercado ou distribuidora com excedente de alimentos? Indique a
+                        Associação Nossa Ação Diária. Essa parceria transforma descarte em impacto social e ambiental
+                        real.
+                    </p>
+                    <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20indicar%20um%20parceiro%20para%20a%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
+                        target="_blank" rel="noopener noreferrer"
+                        class="mt-6 inline-flex items-center gap-2 text-brand-primary font-bold text-sm hover:text-brand-secondary transition-colors">
+                        Entrar em contato →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER / CTA
+    ═══════════════════════════════════════════ -->
+    <footer id="doe-agora"
+        class="bg-[#0e0e0e] text-white pt-32 pb-16 px-6 mt-12 relative overflow-hidden font-sans shrink-0">
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: radial-gradient(circle at 80% 80%, rgba(244,139,41,0.15), transparent 50%), radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 40%);">
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center mb-28 relative z-10 flex flex-col items-center">
+            <h2 class="font-serif text-5xl md:text-6xl font-semibold mb-6 tracking-tight">Pronto para fazer a diferença?
+            </h2>
+            <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto font-light leading-relaxed">
+                Sua doação garante que alimentos em perfeito estado cheguem ao prato de quem tem fome. Reduza a
+                desigualdade com a gente.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+                <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20para%20a%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
+                    target="_blank" rel="noopener noreferrer"
+                    class="bg-[#F48B29] hover:bg-[#ff9e42] text-white rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors shadow-[0_0_40px_rgba(244,139,41,0.3)] text-sm">
+                    Fazer uma Doação
+                </a>
+                <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20ser%20volunt%C3%A1rio%20da%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
+                    target="_blank" rel="noopener noreferrer"
+                    class="bg-[#1a1a1a] hover:bg-[#252525] border border-white/5 text-white rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors text-sm">
+                    Ser Voluntário
+                </a>
+            </div>
+        </div>
+
+        <div
+            class="max-w-6xl mx-auto border-t border-white/5 pt-12 flex flex-col md:flex-row items-center justify-between gap-6 text-[13px] text-gray-500 relative z-10 font-medium">
+            <div class="flex items-center gap-3">
+                <img src="./logo.jpg" alt="Logotipo Associação Nossa Ação Diária"
+                    class="h-12 md:h-16 w-auto object-contain rounded-full">
+            </div>
+            <div class="text-center md:text-left pt-2 md:pt-0 tracking-wide text-gray-400 z-50">
+                <span>CNPJ: 50.998.279/0001-12</span>
+                <span class="hidden md:inline mx-3 opacity-30">•</span>
+                <br class="md:hidden"> Brasília/DF
+            </div>
+            <!-- ODS Badge no Footer -->
+            <div class="flex items-center gap-3">
+                <div
+                    class="ods-badge w-10 h-10 rounded-xl flex flex-col items-center justify-center text-white opacity-80">
+                    <span class="text-[8px] font-bold uppercase leading-none">ODS</span>
+                    <span class="text-lg font-black leading-none">12</span>
+                </div>
+                <span class="text-gray-500 text-xs font-light">Projeto alinhado à<br><strong
+                        class="text-gray-400">Agenda 2030 · Meta 12.8</strong></span>
+            </div>
+            <div class="pt-2 md:pt-0 tracking-wide font-light z-50">
+                &copy; 2026 Associação Nossa Ação Diária. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════════ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // ── Mobile Menu ──────────────────────────────────────
+            const toggle = document.getElementById('mobile-toggle');
+            const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('open');
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
+            });
+
+            // ── GSAP Animations ───────────────────────────────────
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Nav
+            gsap.from("nav", { y: -40, opacity: 0, duration: 1.5, ease: "power4.out", delay: 0.1 });
+
+            // Hero
+            const heroTl = gsap.timeline();
+            heroTl.from(".hero-bg h1", { y: 60, opacity: 0, duration: 1.5, ease: "power4.out" }, 0.3)
+                .from(".hero-bg p", { y: 40, opacity: 0, duration: 1.5, ease: "power4.out" }, 0.5)
+                .from(".hero-bg .flex", { y: 20, opacity: 0, duration: 1.2, ease: "power4.out" }, 0.7);
+
+            // Hero parallax
+            gsap.to(".hero-bg", {
+                backgroundPositionY: "100%",
+                ease: "none",
+                scrollTrigger: { trigger: ".hero-bg", start: "top top", end: "bottom top", scrub: true }
+            });
+
+            // Manifesto
+            gsap.timeline({ scrollTrigger: { trigger: "#manifesto", start: "top 75%" } })
+                .from("#manifesto svg", { scale: 0.5, opacity: 0, duration: 1, ease: "back.out(1.5)" })
+                .from("#manifesto h2", { y: 40, opacity: 0, duration: 1.5, ease: "power4.out" }, "-=0.6")
+                .from("#manifesto .mt-10", { opacity: 0, duration: 1 }, "-=0.8");
+
+            // Cadeia (chain)
+            gsap.from("#cadeia > div > div > div, #cadeia > div > div > .chain-arrow", {
+                y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                scrollTrigger: { trigger: "#cadeia", start: "top 80%" }
+            });
+
+            // Sobre
+            gsap.from("#sobre-nos .grid > div", {
+                y: 50, opacity: 0, duration: 1.2, stagger: 0.15, ease: "power4.out",
+                scrollTrigger: { trigger: "#sobre-nos", start: "top 80%" }
+            });
+
+            // Instagram
+            gsap.from(".insta-grid > div", {
+                scale: 0.9, y: 30, opacity: 0, duration: 1, stagger: 0.1, ease: "power3.out",
+                scrollTrigger: { trigger: "#instagram", start: "top 80%" }
+            });
+
+            // Impacto cards
+            gsap.from("#impacto .grid > div", {
+                y: 80, opacity: 0, duration: 1.5, stagger: 0.15, ease: "power4.out",
+                scrollTrigger: { trigger: "#impacto", start: "top 80%" }
+            });
+
+            // Counter animation
+            const counterEl = document.querySelector("#counter-main");
+            if (counterEl) {
+                gsap.fromTo(counterEl,
+                    { innerText: 0 },
+                    {
+                        innerText: 5000,
+                        duration: 2.5,
+                        ease: "power2.out",
+                        snap: { innerText: 1 },
+                        onUpdate: function () {
+                            counterEl.innerHTML = Math.round(this.targets()[0].innerText).toLocaleString('pt-BR') + '<span class="text-brand-primary">+</span>';
+                        },
+                        scrollTrigger: { trigger: counterEl, start: "top 85%" }
+                    }
+                );
+            }
+
+            // Como Agir
+            gsap.from("#aja-agora .action-card", {
+                y: 50, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out",
+                scrollTrigger: { trigger: "#aja-agora", start: "top 80%" }
+            });
+
+            // Footer
+            gsap.from("footer > div.max-w-4xl > *", {
+                y: 50, opacity: 0, duration: 1.2, stagger: 0.1, ease: "power4.out",
+                scrollTrigger: { trigger: "footer", start: "top 85%" }
+            });
+        });
+    </script>
+
+    <!-- ═══════════════════════════════════════════
+         WHATSAPP FLUTUANTE
+    ═══════════════════════════════════════════ -->
+    <style>
+        #whatsapp-float {
+            animation: wpp-entrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.5s both;
+        }
+
+        @keyframes wpp-entrance {
+            from {
+                opacity: 0;
+                transform: scale(0) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+    </style>
+
+    <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria%20e%20gostaria%20de%20saber%20mais."
+        target="_blank" rel="noopener noreferrer" id="whatsapp-float"
+        aria-label="Falar com a Associação Nossa Ação Diária pelo WhatsApp"
+        class="fixed bottom-6 right-6 z-[999] flex items-center gap-3 group"
+        style="filter: drop-shadow(0 8px 24px rgba(37,211,102,0.4));">
+
+        <!-- Tooltip desktop -->
+        <span
+            class="hidden md:block bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0 whitespace-nowrap">
+            Fale conosco agora 💬
+        </span>
+
+        <!-- Botão -->
+        <div
+            class="relative w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform duration-300">
+            <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white relative z-10" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </div>
+    </a>
+
+</body>
+
+</html>
