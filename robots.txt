@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nossa-acao-diaria.vercel.app/sitemap.xml

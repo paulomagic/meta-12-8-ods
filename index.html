@@ -18,6 +18,14 @@
     <meta property="og:image" content="https://nossa-acao-diaria.vercel.app/fotos/foto-destaque.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nossa Ação Diária | Alimentar Vidas. Preservar o Futuro.">
+    <meta name="twitter:description"
+        content="Conscientização, assistência social e estilos de vida em harmonia com a natureza. Conheça a Associação Nossa Ação Diária e o Projeto Extensionista Meta 12.8.">
+    <meta name="twitter:image" content="https://nossa-acao-diaria.vercel.app/fotos/foto-destaque.jpeg">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#FFFBF5">
+    <link rel="canonical" href="https://nossa-acao-diaria.vercel.app/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="./logo.jpg">
@@ -54,6 +62,30 @@
         }
     </script>
 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Associação Nossa Ação Diária",
+            "url": "https://nossa-acao-diaria.vercel.app/",
+            "logo": "https://nossa-acao-diaria.vercel.app/logo.jpg",
+            "description": "A Associação Nossa Ação Diária promove conscientização e assistência social alinhadas à Meta 12.8 da Agenda 2030.",
+            "sameAs": [
+                "https://www.instagram.com/nossa.acao.diaria/"
+            ],
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "telephone": "+55-61-98578-0653",
+                    "availableLanguage": [
+                        "pt-BR"
+                    ]
+                }
+            ]
+        }
+    </script>
+
     <style>
         body {
             background-color: #FFFBF5;
@@ -63,6 +95,32 @@
 
         html {
             scroll-behavior: smooth;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            z-index: 1000;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px;
+            background: #0A0A0A;
+            color: #ffffff;
+            font-weight: 700;
+            transform: translateY(-140%);
+            transition: transform 0.2s ease;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+            outline: 2px solid #F48B29;
+            outline-offset: 2px;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #F48B29;
+            outline-offset: 2px;
         }
 
         .hero-bg {
@@ -163,15 +221,30 @@
         .action-card:hover {
             box-shadow: 0 20px 40px -10px rgba(244, 139, 41, 0.15);
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 
 <body class="antialiased font-sans flex flex-col min-h-screen">
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
     <!-- ═══════════════════════════════════════════
          NAVIGATION
     ═══════════════════════════════════════════ -->
-    <nav class="absolute w-full top-0 z-50 text-white p-6">
+    <nav aria-label="Navegação principal" class="absolute w-full top-0 z-50 text-white p-6">
         <div
             class="max-w-6xl mx-auto flex justify-between items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
 
@@ -187,24 +260,25 @@
                 <a href="#impacto" class="hover:text-brand-primary transition-colors">Impacto</a>
                 <a href="#aja-agora" class="hover:text-brand-primary transition-colors">Como Agir</a>
                 <a href="#doe-agora"
-                    class="bg-brand-primary hover:bg-white hover:text-brand-dark transition-colors px-6 py-2.5 rounded-full font-semibold">Envolva-se</a>
+                    class="bg-brand-primary text-brand-dark hover:bg-white hover:text-brand-dark transition-colors px-6 py-2.5 rounded-full font-semibold">Envolva-se</a>
             </div>
 
             <!-- Mobile Toggle -->
-            <button id="mobile-toggle" aria-label="Abrir menu de navegação" class="md:hidden p-2">
-                <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+            <button id="mobile-toggle" type="button" aria-label="Abrir menu de navegação" aria-controls="mobile-menu"
+                aria-expanded="false" class="md:hidden p-2">
+                <svg id="icon-open" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
+                <svg id="icon-close" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu"
+        <div id="mobile-menu" aria-hidden="true"
             class="md:hidden flex-col items-center gap-4 bg-black/90 backdrop-blur-xl rounded-3xl mx-4 mt-3 py-8 px-6 border border-white/10">
             <a href="#manifesto"
                 class="mobile-link text-white text-lg font-medium hover:text-brand-primary transition-colors">Manifesto</a>
@@ -217,15 +291,17 @@
                 class="mobile-link text-white text-lg font-medium hover:text-brand-primary transition-colors">Como
                 Agir</a>
             <a href="#doe-agora"
-                class="bg-brand-primary text-white px-8 py-3 rounded-full font-bold w-full text-center mt-2">Envolva-se</a>
+                class="bg-brand-primary text-brand-dark px-8 py-3 rounded-full font-bold w-full text-center mt-2">Envolva-se</a>
         </div>
     </nav>
+
+    <main id="conteudo-principal">
 
     <!-- ═══════════════════════════════════════════
          HERO
     ═══════════════════════════════════════════ -->
     <header
-        class="relative min-h-[95vh] md:min-h-screen w-full hero-bg flex flex-col justify-end pt-36 pb-12 md:pb-24 px-6 rounded-b-[2rem] md:rounded-b-[4rem] overflow-hidden shrink-0">
+        class="relative min-h-[95svh] md:min-h-screen w-full hero-bg flex flex-col justify-end pt-36 pb-12 md:pb-24 px-6 rounded-b-[2rem] md:rounded-b-[4rem] overflow-hidden shrink-0">
         <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
             <h1 class="font-serif text-5xl md:text-7xl font-semibold text-white mb-6 leading-tight">
                 Alimentar vidas.<br><span class="italic font-light">Preservar o futuro.</span>
@@ -236,7 +312,7 @@
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4">
                 <a href="#doe-agora"
-                    class="flex items-center justify-center gap-2 bg-brand-primary text-white rounded-full px-8 py-4 font-bold tracking-wide hover:-translate-y-1 transition-transform w-full sm:w-auto shadow-lg hover:shadow-brand-primary/50 text-center">
+                    class="flex items-center justify-center gap-2 bg-brand-primary text-brand-dark rounded-full px-8 py-4 font-bold tracking-wide hover:-translate-y-1 transition-transform w-full sm:w-auto shadow-lg hover:shadow-brand-primary/50 text-center">
                     Doe Agora
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -603,7 +679,7 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
                         <span
-                            class="bg-brand-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full w-max mb-3">Visão
+                            class="bg-brand-primary text-brand-dark text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full w-max mb-3">Visão
                             ODS 12.8</span>
                         <p class="text-white mx-1">Garantimos que, em todos os lugares, as pessoas tenham informação
                             relevante sobre harmonia com a natureza.</p>
@@ -770,7 +846,7 @@
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                 <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20para%20a%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
                     target="_blank" rel="noopener noreferrer"
-                    class="bg-[#F48B29] hover:bg-[#ff9e42] text-white rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors shadow-[0_0_40px_rgba(244,139,41,0.3)] text-sm">
+                    class="bg-[#F48B29] hover:bg-[#ff9e42] text-[#2a1a0a] rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors shadow-[0_0_40px_rgba(244,139,41,0.3)] text-sm">
                     Fazer uma Doação
                 </a>
                 <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20ser%20volunt%C3%A1rio%20da%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
@@ -807,6 +883,7 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <!-- ═══════════════════════════════════════════
          SCRIPTS
@@ -820,23 +897,35 @@
             const menu = document.getElementById('mobile-menu');
             const iconOpen = document.getElementById('icon-open');
             const iconClose = document.getElementById('icon-close');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            const setMenuState = (isOpen) => {
+                menu.classList.toggle('open', isOpen);
+                iconOpen.classList.toggle('hidden', isOpen);
+                iconClose.classList.toggle('hidden', !isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+                menu.setAttribute('aria-hidden', String(!isOpen));
+            };
+            setMenuState(false);
 
             toggle.addEventListener('click', () => {
-                menu.classList.toggle('open');
-                iconOpen.classList.toggle('hidden');
-                iconClose.classList.toggle('hidden');
+                const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+                setMenuState(!isOpen);
             });
 
             // Close menu when a link is clicked
             document.querySelectorAll('.mobile-link').forEach(link => {
                 link.addEventListener('click', () => {
-                    menu.classList.remove('open');
-                    iconOpen.classList.remove('hidden');
-                    iconClose.classList.add('hidden');
+                    setMenuState(false);
                 });
             });
 
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') setMenuState(false);
+            });
+
             // ── GSAP Animations ───────────────────────────────────
+            if (prefersReducedMotion) return;
             gsap.registerPlugin(ScrollTrigger);
 
             // Nav
