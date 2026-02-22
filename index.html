@@ -183,21 +183,6 @@
         #mobile-menu.open {
             display: flex;
         }
-
-        /* Chain flow animation */
-        .chain-arrow {
-            animation: pulse-arrow 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-arrow {
-
-            0%,
-            100% {
-                opacity: 0.5;
-                transform: translateX(0);
-            }
-
-            50% {
                 opacity: 1;
                 transform: translateX(4px);
             }
@@ -307,8 +292,9 @@
                 Alimentar vidas.<br><span class="italic font-light">Preservar o futuro.</span>
             </h1>
             <p class="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-                Levamos informação relevante e conscientização para o desenvolvimento sustentável. Promovemos ativamente
-                a adoção de estilos de vida em harmonia com a natureza através de nossas ações.
+                A Nossa Ação Diária cozinha, doa, acolhe e cuida.
+                Das ruas às famílias, das crianças aos animais.
+                Toda semana, sem parar, desde 2023.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4">
                 <a href="#doe-agora"
@@ -341,108 +327,102 @@
                 </svg>
             </div>
             <h2 class="font-serif text-3xl md:text-5xl text-brand-dark leading-snug md:leading-tight">
-                "Promover a <span class="italic text-brand-primary font-semibold">conscientização</span> essencial para
-                o desenvolvimento sustentável e inspirar estilos de vida em harmonia com a natureza."
+                "Servir é a nossa resposta. Não por obrigação,<br>mas por <span class="italic text-brand-primary font-semibold">gratidão.</span>"
             </h2>
             <div
                 class="mt-10 flex items-center justify-center gap-4 text-brand-textMuted uppercase tracking-widest text-xs font-bold">
                 <span class="w-12 h-[2px] bg-brand-primary/40"></span>
-                Nosso Manifesto
+                Nossa Ação Diária
                 <span class="w-12 h-[2px] bg-brand-primary/40"></span>
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════
-         CADEIA DA CONSCIENTIZAÇÃO (NOVA SEÇÃO)
+         COMO A ASSOCIAÇÃO OPERA
     ═══════════════════════════════════════════ -->
-    <section id="cadeia" class="py-20 px-6 bg-white shrink-0 overflow-hidden">
+    <section id="como-funciona" class="py-20 px-6 bg-white shrink-0 overflow-hidden">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
-                <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Como
-                    Funciona</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">Da ação ao impacto consciente
-                </h2>
+                <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Como Funciona</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">Uma operação feita de gente</h2>
                 <p class="text-brand-textMuted mt-4 max-w-xl mx-auto text-lg font-light">
-                    Cada gesto da Associação é um ato de educação para a sustentabilidade na prática.
+                    Três fluxos que convergem toda semana para o mesmo resultado: ninguém fica sem.
                 </p>
             </div>
 
-            <!-- Flow Chain -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+            <!-- Três fluxos convergindo -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
-                <!-- Step 1 -->
-                <div class="flex flex-col items-center text-center max-w-[180px]">
-                    <div
-                        class="w-20 h-20 rounded-2xl bg-orange-50 border-2 border-brand-primary/20 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-primary" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                <!-- Fluxo 1: Doações da comunidade -->
+                <div class="bg-orange-50 border border-brand-primary/15 rounded-3xl p-8 flex flex-col gap-4 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-brand-primary/10 rounded-full blur-2xl"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-brand-dark text-sm leading-tight">Alimento que seria descartado</h3>
-                    <p class="text-xs text-brand-textMuted mt-1">Indústria e comércio atacadista</p>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1 block">Fluxo 01</span>
+                        <h3 class="font-serif text-xl text-brand-dark font-semibold mb-2">A comunidade doa</h3>
+                        <p class="text-brand-textMuted text-sm leading-relaxed font-light">
+                            Roupas, cobertores, calçados, itens de higiene e alimentos chegam de pessoas e empresas que
+                            enxergam na Associação um canal confiável para transformar o que sobra em algo necessário.
+                            <strong class="text-brand-dark font-medium">Cada doação é um ato de solidariedade que a
+                            Associação multiplica.</strong>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="chain-arrow text-brand-primary text-3xl md:mx-4 rotate-90 md:rotate-0">→</div>
-
-                <!-- Step 2 -->
-                <div class="flex flex-col items-center text-center max-w-[180px]">
-                    <div
-                        class="w-20 h-20 rounded-2xl bg-orange-50 border-2 border-brand-primary/20 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-primary" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+                <!-- Fluxo 2: Recursos próprios -->
+                <div class="bg-orange-50 border border-brand-primary/15 rounded-3xl p-8 flex flex-col gap-4 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-brand-primary/10 rounded-full blur-2xl"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-brand-dark text-sm leading-tight">Redistribuído com inteligência</h3>
-                    <p class="text-xs text-brand-textMuted mt-1">Voluntários e rede ativa de doações</p>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1 block">Fluxo 02</span>
+                        <h3 class="font-serif text-xl text-brand-dark font-semibold mb-2">A Associação vai ao mercado</h3>
+                        <p class="text-brand-textMuted text-sm leading-relaxed font-light">
+                            Com os recursos arrecadados em doações financeiras, a própria equipe vai ao mercado,
+                            compra os ingredientes, volta para a cozinha e prepara a comida que será distribuída.
+                            <strong class="text-brand-dark font-medium">Do planejamento ao fogão, tudo feito
+                            com cuidado e intenção.</strong>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="chain-arrow text-brand-primary text-3xl md:mx-4 rotate-90 md:rotate-0"
-                    style="animation-delay:0.3s">→</div>
-
-                <!-- Step 3 -->
-                <div class="flex flex-col items-center text-center max-w-[180px]">
-                    <div
-                        class="w-20 h-20 rounded-2xl bg-orange-50 border-2 border-brand-primary/20 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-primary" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                <!-- Fluxo 3: Distribuição nas ruas -->
+                <div class="bg-orange-50 border border-brand-primary/15 rounded-3xl p-8 flex flex-col gap-4 relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-brand-primary/10 rounded-full blur-2xl"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-brand-dark text-sm leading-tight">Dignidade entregue a quem precisa
-                    </h3>
-                    <p class="text-xs text-brand-textMuted mt-1">Pessoas em vulnerabilidade social</p>
-                </div>
-
-                <div class="chain-arrow text-brand-primary text-3xl md:mx-4 rotate-90 md:rotate-0"
-                    style="animation-delay:0.6s">→</div>
-
-                <!-- Step 4 -->
-                <div class="flex flex-col items-center text-center max-w-[180px]">
-                    <div
-                        class="w-20 h-20 rounded-2xl bg-green-50 border-2 border-green-500/30 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1 block">Fluxo 03</span>
+                        <h3 class="font-serif text-xl text-brand-dark font-semibold mb-2">Vai para as ruas</h3>
+                        <p class="text-brand-textMuted text-sm leading-relaxed font-light">
+                            Comida quente, roupas, cobertores, tudo chega nas mãos de quem vive nas ruas de Brasília,
+                            entregue pessoalmente pelos voluntários. Não é logística.
+                            <strong class="text-brand-dark font-medium">É presença. É olho no olho.
+                            É dignidade que não cabe em uma estatística.</strong>
+                        </p>
                     </div>
-                    <h3 class="font-semibold text-green-700 text-sm leading-tight">Conscientização para a sociedade</h3>
-                    <p class="text-xs text-green-600/70 mt-1 font-medium">Meta 12.8 - Agenda 2030</p>
                 </div>
             </div>
 
-            <!-- Tagline -->
-            <p class="text-center text-brand-textMuted mt-12 text-base max-w-2xl mx-auto font-light leading-relaxed">
-                Ao transformar o descarte em dignidade, a Associação não apenas alimenta corpos, ela educa a sociedade
-                que <strong class="text-brand-dark font-semibold">consumir com responsabilidade e cuidar do próximo é a
-                    tradução prática da sustentabilidade.</strong>
-            </p>
+            <!-- Convergência -->
+            <div class="bg-brand-dark rounded-3xl p-8 md:p-10 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 50%, rgba(244,139,41,0.2), transparent 50%), radial-gradient(circle at 70% 50%, rgba(233,30,99,0.1), transparent 50%);"></div>
+                <p class="text-white/80 text-lg md:text-xl font-light leading-relaxed relative z-10 max-w-3xl mx-auto">
+                    Esses três fluxos acontecem toda semana em Brasília. Sem campanha. Sem slogan.
+                    É <strong class="text-white">gente comum fazendo a coisa certa.</strong>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -454,9 +434,9 @@
         <div class="absolute -right-20 bottom-0 w-60 h-60 bg-brand-secondary/5 rounded-full blur-[60px]"></div>
         <div class="max-w-4xl mx-auto relative z-10 text-center">
             <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Quem Somos</span>
-            <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4 leading-tight">Nossa Base Institucional</h2>
-            <p class="text-brand-textMuted text-base mb-16 max-w-xl mx-auto font-light">Três pilares de atuação que,
-                juntos, constroem o caminho para o desenvolvimento sustentável na prática.</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4 leading-tight">O que a Associação faz</h2>
+            <p class="text-brand-textMuted text-base mb-16 max-w-xl mx-auto font-light">Três frentes de atuação real,
+                em campo, toda semana, em Brasília.</p>
 
             <!-- Três Pilares com integração da Meta 12.8 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-16">
@@ -473,16 +453,11 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Pilar 01</span>
                     <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Assistência e Doações</h3>
                     <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
-                        A Associação desenvolve programas de assistência social e caráter beneficente, apoiando famílias
-                        com doações de alimentos, roupas e itens de necessidade básica. Ao recolher alimentos de
-                        excelência que seriam descartados pela indústria e redistribuí-los com inteligência e agilidade,
-                        a Associação ensina na prática o valor do <strong class="text-brand-dark font-medium">consumo
-                            consciente e do desperdício zero</strong>, princípios centrais do desenvolvimento
-                        sustentável previsto na Meta 12.8.
+                        A comunidade doa roupas, alimentos e itens básicos. Os doadores contribuem com recursos financeiros.
+                        A Associação compra, organiza e leva até quem precisa.
+                        <strong class="text-brand-dark font-medium">Nenhuma doação é pequena. Nenhum gesto é em vão.</strong>
                     </p>
                     <div class="mt-5 pt-5 border-t border-gray-100">
-                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta
-                            12.8: Consumo Responsável</span>
                     </div>
                 </div>
 
@@ -498,15 +473,12 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Pilar 02</span>
                     <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Crianças e Adolescentes</h3>
                     <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
-                        Por meio de campanhas e atividades culturais voltadas a crianças e adolescentes em situação de
-                        vulnerabilidade, a Associação planta sementes de consciência nas gerações que mais precisam de
-                        referências. Educar pelo exemplo é a forma mais poderosa de cumprir a missão da Meta 12.8:
-                        <strong class="text-brand-dark font-medium">garantir que pessoas em todos os lugares</strong>
-                        tenham acesso a informação relevante para viver em harmonia com a natureza e com o próximo.
+                        De todas as pessoas que servimos, as crianças são as que nos tocam de forma especial.
+                        Levamos lanches, brinquedos e atividades culturais, mas acima de tudo levamos
+                        <strong class="text-brand-dark font-medium">cuidado, atenção e amor.</strong>
+                        No sorriso de cada criança atendida, encontramos o motivo para continuar.
                     </p>
                     <div class="mt-5 pt-5 border-t border-gray-100">
-                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta
-                            12.8: Educação para Futuro</span>
                     </div>
                 </div>
 
@@ -522,15 +494,13 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Pilar 03</span>
                     <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Resgate e Reintegração Social</h3>
                     <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
-                        A Associação presta auxílio social, apoio e acolhimento a pessoas em situação de rua e em
-                        recuperação de dependência química e alcoólica, com foco na reintegração familiar e social. Ao
-                        devolver dignidade e pertencimento a quem foi invisibilizado, a Associação demonstra que <strong
-                            class="text-brand-dark font-medium">sustentabilidade humana e ambiental são
-                            inseparáveis</strong>: cuidar de pessoas é cuidar do mundo.
+                        Pessoas em situação de rua e em recuperação de dependência química recebem
+                        acolhimento, escuta e um caminho de volta. Para a família, para a sociedade, para si mesmas.
+                        <strong class="text-brand-dark font-medium">Cada abraço, cada conversa e cada olhar
+                        são uma forma de mostrar que ninguém está sozinho.</strong>
                     </p>
                     <div class="mt-5 pt-5 border-t border-gray-100">
-                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta
-                            12.8: Harmonia com o Próximo</span>
+                        <span class="text-xs text-green-600 font-semibold bg-green-50 px-3 py-1 rounded-full">↔ Meta 12.8: Harmonia com o Próximo</span>
                     </div>
                 </div>
             </div>
@@ -554,12 +524,11 @@
                         <h3 class="font-serif text-2xl md:text-3xl text-white mb-4 leading-snug">Nosso Papel na ODS 12.8
                         </h3>
                         <p class="text-white/70 text-base font-light leading-relaxed">
-                            Esta plataforma digitaliza e amplifica o impacto da Associação, transformando cada ação do
-                            campo em informação pública e inspiradora. Ao conectar a sociedade ao trabalho real da Nossa
-                            Ação Diária, aqui em Brasília/DF, mas com potencial de inspirar associações em todo o
-                            Brasil, cumprimos a Meta 12.8 da Agenda 2030 da ONU: <strong class="text-white">garantir
-                                que pessoas, em todos os lugares, tenham informação relevante para estilos de vida em
-                                harmonia com a natureza.</strong>
+                            A Nossa Ação Diária nunca precisou de uma meta da ONU para fazer o que faz.
+                            Mas o que ela faz é exatamente o que a Meta 12.8 da Agenda 2030 pede ao mundo:
+                            que pessoas, em todos os lugares, vivam de forma consciente, solidária e em harmonia
+                            com a natureza e com o próximo. <strong class="text-white">Esta plataforma existe para
+                            tornar esse exemplo visível e inspirar outros a seguirem o mesmo caminho.</strong>
                         </p>
                     </div>
                 </div>
@@ -626,114 +595,82 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
-         IMPACTO - BENTO GRID
+         IMPACTO — NÚMEROS REAIS
     ═══════════════════════════════════════════ -->
     <section id="impacto" class="py-12 md:py-24 px-6 shrink-0 w-full overflow-hidden bg-brand-bg">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-14">
-                <span
-                    class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Resultados</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">O impacto em números</h2>
+                <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary mb-4 block">Retrospectiva 2025</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">O que foi feito, de verdade</h2>
+                <p class="text-brand-textMuted mt-4 max-w-xl mx-auto font-light text-lg">
+                    Números reais de um ano inteiro de trabalho voluntário em Brasília.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Grid de métricas reais -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
 
-                <!-- Card Métricas Principal -->
-                <div
-                    class="md:col-span-2 bg-white rounded-[2rem] p-10 md:p-14 card-shadow flex flex-col justify-between border border-brand-primary/10 min-h-[300px]">
-                    <div class="flex justify-between items-start mb-8">
-                        <span class="uppercase tracking-widest text-xs font-bold text-brand-secondary">Um Mundo
-                            Renascido</span>
-                        <div class="w-10 h-10 rounded-full bg-brand-bg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-primary" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 id="counter-main"
-                            class="font-serif text-6xl md:text-8xl font-bold text-brand-dark tracking-tighter">
-                            5.000<span class="text-brand-primary">+</span></h3>
-                        <p class="text-brand-textMuted text-lg md:text-xl mt-4 max-w-sm">Pessoas <strong
-                                class="text-brand-dark">conscientizadas e assistidas</strong> com ações sobre estilos de
-                            vida sustentáveis em Brasília desde 2023.</p>
-                        <!-- Distinção Assistência vs Conscientização -->
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <span
-                                class="text-xs bg-orange-50 text-brand-primary border border-brand-primary/20 px-3 py-1.5 rounded-full font-semibold">Assistência
-                                direta: famílias e indivíduos</span>
-                            <span
-                                class="text-xs bg-green-50 text-green-700 border border-green-200 px-3 py-1.5 rounded-full font-semibold">Conscientização:
-                                visitantes da plataforma</span>
-                        </div>
-                    </div>
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">5.880<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">marmitas entregues todo sábado em Taguatinga</span>
                 </div>
 
-                <!-- Card Foto Visão ODS -->
-                <div class="bg-gray-200 rounded-[2rem] overflow-hidden relative group min-h-[300px]">
-                    <img src="./fotos/foto-1.jpeg" loading="lazy"
-                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Voluntário da Associação Nossa Ação Diária em ação no campo">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
-                        <span
-                            class="bg-brand-primary text-brand-dark text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full w-max mb-3">Visão
-                            ODS 12.8</span>
-                        <p class="text-white mx-1">Garantimos que, em todos os lugares, as pessoas tenham informação
-                            relevante sobre harmonia com a natureza.</p>
-                    </div>
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">2.000<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">kits de lanches para crianças e famílias</span>
                 </div>
 
-                <!-- Card Missão -->
-                <div
-                    class="bg-brand-dark rounded-[2rem] p-10 md:p-14 text-white flex flex-col justify-between min-h-[300px] relative overflow-hidden">
-                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-primary/20 rounded-full blur-3xl"></div>
-                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-brand-secondary/20 rounded-full blur-3xl">
-                    </div>
-                    <div class="relative z-10">
-                        <span class="uppercase tracking-widest text-xs font-bold text-brand-primary mb-6 block">Nossa
-                            Missão</span>
-                        <h3 class="font-serif text-3xl md:text-4xl leading-snug">Construindo um futuro de consciência
-                            profunda.</h3>
-                    </div>
-                    <div class="mt-8 relative z-10">
-                        <p class="text-white/60 text-sm font-light">Associação ativa em Brasília/DF desde 2023, um
-                            modelo replicável para todo o Brasil.</p>
-                    </div>
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">400<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">cestas básicas distribuídas</span>
                 </div>
 
-                <!-- Card Inteligência Solidária -->
-                <div
-                    class="md:col-span-2 bg-white rounded-[2rem] p-10 md:p-14 card-shadow border border-brand-primary/10 flex flex-col md:flex-row gap-8 items-center min-h-[300px]">
-                    <div class="flex-1">
-                        <h3 class="font-serif text-3xl font-semibold mb-4 text-brand-dark">Como funciona a inteligência
-                            solidária?</h3>
-                        <p class="text-brand-textMuted leading-relaxed mb-8">Nós recolhemos alimentos de excelência que
-                            seriam descartados pela indústria e comércios atacadistas, e os direcionamos em tempo
-                            recorde para pessoas em situação de rua, através da nossa rede de voluntários ativos.
-                            <strong class="text-brand-dark">Zero desperdício. Máximo impacto humano.</strong>
-                        </p>
-                        <a href="#aja-agora"
-                            class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-brand-secondary transition-colors uppercase tracking-wider text-sm">
-                            Como você pode agir
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div
-                        class="w-full md:w-1/3 aspect-square rounded-[2rem] overflow-hidden shrink-0 border-8 border-brand-bg relative flex items-center justify-center">
-                        <img src="./fotos/foto-2.jpeg" loading="lazy"
-                            class="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                            alt="Membros da Associação Nossa Ação Diária em atividade solidária">
-                    </div>
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">1 t<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">de roupas e calçados entregues nas ruas</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">400<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">cobertores para moradores de rua</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">800<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">brinquedos para crianças em vulnerabilidade</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">100<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">kits de higiene e fraldas para bebês</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 flex flex-col">
+                    <span class="text-3xl md:text-4xl font-black text-brand-dark tracking-tighter">1.000<span class="text-brand-primary">+</span></span>
+                    <span class="text-brand-textMuted text-sm mt-2 font-light leading-snug">horas de escuta, cuidado, amor e gratidão</span>
                 </div>
 
             </div>
+
+            <!-- Linha extra: apoios adicionais -->
+            <div class="bg-white rounded-2xl p-6 card-shadow border border-brand-primary/10 mb-6">
+                <p class="text-brand-textMuted text-sm font-light leading-relaxed text-center">
+                    E ainda: <strong class="text-brand-dark font-semibold">100 kg de peixe</strong> distribuídos,
+                    <strong class="text-brand-dark font-semibold">móveis, eletrodomésticos e gás de cozinha</strong> para famílias em recomeço,
+                    <strong class="text-brand-dark font-semibold">apoio com aluguel, água, luz, consultas médicas e medicamentos</strong>
+                    e <strong class="text-brand-dark font-semibold">200 kg de ração</strong> para animais em situação de rua.
+                </p>
+            </div>
+
+            <!-- Frase deles — fechamento -->
+            <div class="bg-brand-dark rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 50%, rgba(244,139,41,0.3), transparent 50%), radial-gradient(circle at 70% 50%, rgba(233,30,99,0.15), transparent 50%);"></div>
+                <p class="font-serif text-3xl md:text-5xl text-white font-semibold relative z-10 leading-snug">
+                    "Somos pessoas<br><span class="italic font-light text-brand-primary">ajudando pessoas.</span>"
+                </p>
+                <p class="text-white/40 text-sm mt-6 relative z-10 uppercase tracking-widest font-medium">Roberta Reis, fundadora da Nossa Ação Diária</p>
+            </div>
+
         </div>
     </section>
 
@@ -748,8 +685,8 @@
                 <h2 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight mb-4">Como você pode agir agora
                 </h2>
                 <p class="text-brand-textMuted max-w-xl mx-auto font-light text-lg">
-                    A conscientização só se completa quando inspira ação. Escolha como quer fazer parte desta mudança,
-                    cada gesto conta.
+                    Ver o que a Associação faz e não fazer nada é desperdiçar a melhor parte, a inspiração.
+                    Escolha como quer entrar nessa história.
                 </p>
             </div>
 
@@ -768,9 +705,9 @@
                         Imediata</span>
                     <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Compartilhe</h3>
                     <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
-                        Compartilhe este site e o Instagram da Associação com sua rede. Informação que não circula não
-                        transforma. Cada compartilhamento é um ato de conscientização, exatamente o que a Meta 12.8
-                        pede.
+                        Mostrar o que a Associação faz para mais pessoas já é um ato de transformação.
+                        Informação que não circula não muda nada. Mande o link para alguém que precisa
+                        ver que sustentabilidade tem rosto, nome e endereço em Brasília.
                     </p>
                     <a href="https://www.instagram.com/nossa.acao.diaria/" target="_blank" rel="noopener noreferrer"
                         class="mt-6 inline-flex items-center gap-2 text-brand-primary font-bold text-sm hover:text-brand-secondary transition-colors">
@@ -791,9 +728,10 @@
                         Dia</span>
                     <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Reduza o Desperdício</h3>
                     <p class="text-[#555] text-sm leading-relaxed font-light flex-1">
-                        Planejar compras, aproveitar alimentos integralmente e compostar resíduos são atos de
-                        sustentabilidade real. A mesma lógica da Associação (nada se perde) pode começar dentro da sua
-                        casa hoje.
+                        Planejar as compras da semana, aproveitar os alimentos por inteiro, dar uma nova vida ao que sobra.
+                        Pequenos gestos que, somados, mudam o ciclo.
+                        <strong class="text-brand-dark font-medium">A Nossa Ação Diária faz isso em escala toda semana.
+                        Você pode começar hoje, em casa.</strong>
                     </p>
                     <span class="mt-6 inline-flex items-center gap-2 text-green-700 font-bold text-sm">
                         Pequenas ações, grande impacto ✓
@@ -813,9 +751,10 @@
                         Empresas</span>
                     <h3 class="font-serif text-xl text-brand-dark font-semibold mb-3">Indique a Associação</h3>
                     <p class="text-brand-textMuted text-sm leading-relaxed font-light flex-1">
-                        Conhece alguma empresa, supermercado ou distribuidora com excedente de alimentos? Indique a
-                        Associação Nossa Ação Diária. Essa parceria transforma descarte em impacto social e ambiental
-                        real.
+                        Conhece alguma empresa, supermercado ou distribuidora que queira fazer parte disso?
+                        A Associação aceita doações de alimentos, itens básicos, móveis, eletrodomésticos
+                        e recursos financeiros. <strong class="text-brand-dark font-medium">Uma parceria sua
+                        pode mudar muitas vidas.</strong>
                     </p>
                     <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20indicar%20um%20parceiro%20para%20a%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
                         target="_blank" rel="noopener noreferrer"
@@ -840,8 +779,8 @@
             <h2 class="font-serif text-5xl md:text-6xl font-semibold mb-6 tracking-tight">Pronto para fazer a diferença?
             </h2>
             <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto font-light leading-relaxed">
-                Sua doação garante que alimentos em perfeito estado cheguem ao prato de quem tem fome. Reduza a
-                desigualdade com a gente.
+                Cada real doado vira comida no prato de quem tem fome. Cada voluntário é um braço a mais
+                para chegar mais longe. Escolha como entrar nessa história.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                 <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20para%20a%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
@@ -951,9 +890,9 @@
                 .from("#manifesto .mt-10", { opacity: 0, duration: 1 }, "-=0.8");
 
             // Cadeia (chain)
-            gsap.from("#cadeia > div > div > div, #cadeia > div > div > .chain-arrow", {
-                y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out",
-                scrollTrigger: { trigger: "#cadeia", start: "top 80%" }
+            gsap.from("#como-funciona .grid > div, #como-funciona > div > div:last-child", {
+                y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: "power3.out",
+                scrollTrigger: { trigger: "#como-funciona", start: "top 80%" }
             });
 
             // Sobre
