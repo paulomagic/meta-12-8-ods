@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nossa-acao-diaria.vercel.app/sitemap.xml
+Sitemap: https://www.nossa-acao-diaria.org/sitemap.xml

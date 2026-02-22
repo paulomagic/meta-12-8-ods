@@ -8,7 +8,7 @@
 
 <br>
 
-**🔗 Live Demo:** [nossa-acao-diaria.vercel.app](https://nossa-acao-diaria.vercel.app)
+**🔗 Live Demo:** [www.nossa-acao-diaria.org](https://www.nossa-acao-diaria.org)
 
 <br>
 
