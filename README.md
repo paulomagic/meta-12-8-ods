@@ -125,12 +125,12 @@ open index.html
 
 1. **Hero** — O que a Associação faz
 2. **Manifesto** — O propósito de servir
-3. **Como a Associação Opera** — Três fluxos que convergem toda semana
-4. **Base Institucional** — Integração da assistência diária com a Meta 12.8
-5. **Nossa Ação na Prática** — Grade fotográfica conectada ao Instagram
-6. **Retrospectiva 2025** — Números reais e doações
-7. **Como Agir Agora** — Três atitudes para visitantes
-8. **CTA** — Doação e voluntariado via WhatsApp
+3. **Como Funciona** — Três fluxos que convergem toda semana
+4. **Quem Somos** — Três frentes de atuação e o papel na Meta 12.8
+5. **Nossa Ação na Prática** — Grade fotográfica e Instagram
+6. **Nosso Impacto** — Números reais de distribuição
+7. **Como Agir Agora** — Formas práticas de contribuir
+8. **Rodapé/CTA** — Doação e voluntariado via WhatsApp
 
 <br>
 
