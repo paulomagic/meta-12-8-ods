@@ -14,8 +14,8 @@
         content="Em Brasília/DF, uma Associação cozinha, doa, acolhe e cuida. Das ruas às famílias, das crianças aos animais. Toda semana, sem parar, desde 2023.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:url" content="https://www.nossa-acao-diaria.org/">
-    <meta property="og:image" content="https://www.nossa-acao-diaria.org/fotos/foto-compartilhamento.jpeg">
+    <meta property="og:url" content="https://nossa-acao-diaria.vercel.app/">
+    <meta property="og:image" content="https://nossa-acao-diaria.vercel.app/fotos/foto-compartilhamento.jpeg">
     <meta property="og:image:alt"
         content="Voluntária da Associação Nossa Ação Diária distribuindo alimentos para famílias em Brasília/DF">
     <meta property="og:image:width" content="1200">
@@ -24,10 +24,10 @@
     <meta name="twitter:title" content="Nossa Ação Diária | Cozinha, Doa, Acolhe e Cuida.">
     <meta name="twitter:description"
         content="Em Brasília/DF, uma Associação cozinha, doa, acolhe e cuida. Das ruas às famílias, das crianças aos animais. Toda semana, sem parar, desde 2023.">
-    <meta name="twitter:image" content="https://www.nossa-acao-diaria.org/fotos/foto-compartilhamento.jpeg">
+    <meta name="twitter:image" content="https://nossa-acao-diaria.vercel.app/fotos/foto-compartilhamento.jpeg">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#FFFBF5">
-    <link rel="canonical" href="https://www.nossa-acao-diaria.org/">
+    <link rel="canonical" href="https://nossa-acao-diaria.vercel.app/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="./logo.jpg">
@@ -69,8 +69,8 @@
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Associação Nossa Ação Diária",
-            "url": "https://www.nossa-acao-diaria.org/",
-            "logo": "https://www.nossa-acao-diaria.org/logo.jpg",
+            "url": "https://nossa-acao-diaria.vercel.app/",
+            "logo": "https://nossa-acao-diaria.vercel.app/logo.jpg",
             "description": "A Associação Nossa Ação Diária cozinha, doa, acolhe e cuida. Toda semana no Distrito Federal.",
             "sameAs": [
                 "https://www.instagram.com/nossa.acao.diaria/"
@@ -715,7 +715,7 @@
                         <strong class="text-brand-dark font-semibold">móveis, eletrodomésticos e gás de cozinha</strong>
                         para famílias em recomeço,
                         <strong class="text-brand-dark font-semibold">apoio com aluguel, água, luz, consultas médicas e
-                            medicamentos</strong>;
+                            medicamentos</strong>
                         e <strong class="text-brand-dark font-semibold">200 kg de ração</strong> para animais em
                         situação de rua.
                     </p>
@@ -793,6 +793,7 @@
                         <p class="text-[#555] text-sm leading-relaxed font-light flex-1">
                             Planejar as compras da semana, aproveitar os alimentos por inteiro, escolher com consciência
                             o que entra em casa.
+                            Pequenos gestos que, somados, mudam o ciclo.
                             <strong class="text-brand-dark font-medium">Pequenos gestos que, somados, mudam o ciclo.
                                 Você pode começar hoje, em casa.</strong>
                         </p>
@@ -847,11 +848,21 @@
                     Venha fazer parte disso.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-                    <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20para%20a%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
-                        target="_blank" rel="noopener noreferrer"
-                        class="bg-[#F48B29] hover:bg-[#ff9e42] text-[#2a1a0a] rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors shadow-[0_0_40px_rgba(244,139,41,0.3)] text-sm">
-                        Fazer uma Doação
-                    </a>
+
+                    <!-- Botão Pix -->
+                    <div class="flex flex-col items-center gap-2 w-full sm:w-auto">
+                        <button id="pix-copy-btn" onclick="copyPix()"
+                            class="bg-[#F48B29] hover:bg-[#ff9e42] text-[#2a1a0a] rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors shadow-[0_0_40px_rgba(244,139,41,0.3)] text-sm flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            <span id="pix-btn-text">Copiar chave Pix</span>
+                        </button>
+                        <span class="text-white/30 text-xs font-light tracking-wide">CNPJ: 50.998.279/0001-12</span>
+                    </div>
+
                     <a href="https://wa.me/5561985780653?text=Ol%C3%A1!%20Gostaria%20de%20ser%20volunt%C3%A1rio%20da%20Associa%C3%A7%C3%A3o%20Nossa%20A%C3%A7%C3%A3o%20Di%C3%A1ria."
                         target="_blank" rel="noopener noreferrer"
                         class="bg-[#1a1a1a] hover:bg-[#252525] border border-white/5 text-white rounded-full px-10 py-4 font-bold tracking-wide w-full sm:w-auto transition-colors text-sm">
@@ -896,6 +907,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
+        // ── Pix Copy ──────────────────────────────────────
+        function copyPix() {
+            const chavePix = '50.998.279/0001-12';
+            const btn = document.getElementById('pix-copy-btn');
+            const btnText = document.getElementById('pix-btn-text');
+
+            navigator.clipboard.writeText(chavePix).then(() => {
+                btnText.textContent = 'Chave copiada! ✓';
+                btn.classList.remove('bg-[#F48B29]', 'hover:bg-[#ff9e42]');
+                btn.classList.add('bg-green-500', 'hover:bg-green-400');
+
+                setTimeout(() => {
+                    btnText.textContent = 'Copiar chave Pix';
+                    btn.classList.remove('bg-green-500', 'hover:bg-green-400');
+                    btn.classList.add('bg-[#F48B29]', 'hover:bg-[#ff9e42]');
+                }, 3000);
+            }).catch(err => {
+                console.error('Falha ao copiar:', err);
+                alert('Não foi possível copiar automaticamente. Por favor, copie o CNPJ exibido abaixo do botão.');
+            });
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             // ── Mobile Menu ──────────────────────────────────────
             const toggle = document.getElementById('mobile-toggle');
