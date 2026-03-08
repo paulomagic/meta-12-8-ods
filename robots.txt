@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /.vercel/
+Disallow: /.agent/
+Disallow: /.git/
 
 Sitemap: https://www.nossa-acao-diaria.org/sitemap.xml
