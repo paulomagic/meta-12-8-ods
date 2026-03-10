@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossa Ação Diária | Cozinha, Doa, Acolhe e Cuida.</title>
 
-    <!-- SEO & Open Graph -->
     <meta name="description"
         content="Em Brasília/DF, a Associação Nossa Ação Diária cozinha, doa, acolhe e cuida. Das ruas às famílias, das crianças aos animais. Toda semana, sem parar, desde 2020.">
     <meta property="og:title" content="Nossa Ação Diária | Cozinha, Doa, Acolhe e Cuida.">
@@ -32,11 +31,9 @@
     <meta name="theme-color" content="#FFFBF5">
     <link rel="canonical" href="https://www.nossa-acao-diaria.org/">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="./logo.jpg">
     <link rel="apple-touch-icon" href="./logo.jpg">
 
-    <!-- Preload imagem principal do hero -->
     <link rel="preload" as="image" href="./fotos/hero1.jpeg" fetchpriority="high">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -228,7 +225,6 @@
         }
     </style>
 
-    <!-- Animação do botão WhatsApp flutuante -->
     <style>
         #whatsapp-float {
             animation: wpp-entrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.5s both;
@@ -247,7 +243,6 @@
         }
     </style>
 
-    <!-- Vercel Web Analytics -->
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
@@ -285,7 +280,6 @@
             </button>
         </div>
 
-        <!-- menu mobile -->
         <div id="mobile-menu" aria-hidden="true"
             class="md:hidden flex-col items-center gap-4 bg-black/90 backdrop-blur-xl rounded-3xl mx-4 mt-3 py-8 px-6 border border-white/10">
             <a href="#manifesto"
@@ -357,7 +351,6 @@
                     Movidos pela fé. Guiados pelo amor ao próximo.
                 </p>
 
-                <!-- Versículo Adicionado -->
                 <div class="mt-16 max-w-2xl mx-auto relative px-8">
                     <p class="font-serif text-2xl md:text-3xl text-brand-dark/80 leading-relaxed relative inline-block">
                         <span
@@ -920,7 +913,6 @@
                 .from(".hero-bg p", { y: 40, opacity: 0, duration: 1.5, ease: "power4.out" }, 0.5)
                 .from(".hero-bg .flex", { y: 20, opacity: 0, duration: 1.2, ease: "power4.out" }, 0.7);
 
-            // parallax
             gsap.to(".hero-bg", {
                 backgroundPositionY: "100%",
                 ease: "none",
