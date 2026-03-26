@@ -28,7 +28,7 @@ Transformar as ações de campo da Associação Nossa Ação Diária em **inform
 
 ## 🏛️ A Associação Nossa Ação Diária
 
-**CNPJ:** 50.998.279/0001-12 · **Brasília/DF** · Ativa desde 2023
+**CNPJ:** 50.998.279/0001-12 · **Brasília/DF** · Ativa desde 2020
 
 A Associação atua em três pilares institucionais:
 
@@ -157,7 +157,7 @@ A Meta 12.8 atinge dois públicos distintos nesta plataforma:
 
 ## 📈 Impacto Documentado
 
-- **+5.000 pessoas** alcançadas por ações de assistência e conscientização desde 2023
+- **+5.000 pessoas** alcançadas por ações de assistência e conscientização desde 2020
 - **Brasília/DF** — atuação local com potencial de modelo replicável nacional
 - **Instagram** [@nossa.acao.diaria](https://www.instagram.com/nossa.acao.diaria/) — documentação contínua das ações
 
